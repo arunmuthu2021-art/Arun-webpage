@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ShopEasy Login</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        width: 320px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    /* Hidden prank page */
+    #prankPage {
+        display: none;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+    }
+
+    .prank-box {
+        text-align: center;
+    }
+
+    .prank-box h1 {
+        font-size: 32px;
+        color: #333;
+    }
+
+    .emoji {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Login Page -->
+<div class="container" id="loginPage">
+    <div class="card">
+        <h2>🛒 ShopEasy</h2>
+        <input type="text" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button onclick="showPrank()">Login</button>
+        <p style="margin-top:10px;">New user? Sign up</p>
+    </div>
+</div>
+
+<!-- Prank Page -->
+<div class="container" id="prankPage">
+    <div class="prank-box">
+        <h1>😜 April Fool!</h1>
+        <h3> Your the first fool I have ever seen...
+        </h3> No more fools… because you're already a fool 😜
+    </div>
+</div>
+
+<script>
+function showPrank() {
+    document.getElementById("loginPage").style.display = "none";
+    document.getElementById("prankPage").style.display = "flex";
+}
+</script>
+
+</body>
+</html>
